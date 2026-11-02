@@ -1,54 +1,79 @@
+<div align="center">
+
+<img src="BLACK-HIVE-OBSIDIAN-QUEEN-ICON.png" alt="BLACK HIVE Obsidian Queen crowned bee artwork" width="220">
+
 # 🐝 HONEYTRAP // BLACK HIVE
-## OBSIDIAN QUEEN · v0.3.1
+### 👑 OBSIDIAN QUEEN · v0.3.1
 
 **Every hive has honey. This one has eyes.**
 
-A defensive, **localhost-first** honeypot workshop for observing requests to decoy paths on a computer you control. BLACK HIVE brings together colorful terminal alerts, a Command Center, Live Signal monitoring, Live Watch, and an Evidence Vault.
+**Defensive Honeypot · Live Signal · Live Watch · Evidence Vault**
 
-### Included in the v0.3.1 package
+[**⬇️ DOWNLOAD v0.3.1**](https://github.com/Hellfire13666/honeytrap-black-hive/releases/tag/v0.3.1) · [**📖 RECIPES**](RECIPES.md) · [**🛡️ SECURITY**](SECURITY.md)
 
-- **Command Center** — menu-driven access to BLACK HIVE tools.
-- **Live Signal** — local decoy-request monitoring and terminal alerts.
-- **Live Watch** — local monitoring view.
-- **Evidence Vault** — inspection of locally generated records.
-- **Tests and recipes** — test suite and usage documentation.
-- **Obsidian Queen artwork** — official crowned-bee desktop icon.
+</div>
 
-### 🔒 Privacy and scope
+---
 
-BLACK HIVE is intended for **defensive use on systems you own or are authorized to test**. Its local-only design uses the loopback address **`127.0.0.1`**, not a public internet listener. It is **not** a substitute for a firewall, intrusion detection service, or full security audit.
+## ⬡ ENTER THE BLACK HIVE
 
-**Never publish** real event logs, local reports, credentials, browser cookies, private keys, usernames, hostnames, local absolute paths, or configuration containing personal information. Review the contents of an archive *before* distributing it. Public GitHub visibility means anyone can download files you commit.
+A black-and-gold, localhost-first defensive monitoring workshop built for observing decoy-route requests on machines you control. **BLACK HIVE // OBSIDIAN QUEEN** combines a colorful terminal command center, live monitoring, a local dashboard, and private evidence review.
 
-### Download the verified v0.3.1 release
+| 🐝 Command Center | 📡 Live Signal | 🖥️ Live Watch | 🔐 Evidence Vault |
+|:---:|:---:|:---:|:---:|
+| One menu for the hive | Local decoy alerts | Local monitoring display | Inspect saved local records |
 
-**[Download BLACK HIVE // OBSIDIAN QUEEN v0.3.1](https://github.com/Hellfire13666/honeytrap-black-hive/releases/tag/v0.3.1)**
+### ⚡ Quick start
 
-The corrected release asset is **`BLACK-HIVE-v0.3.1-OBSIDIAN-QUEEN-INSTALLER-FIX.zip`**. It supersedes the previous ZIP that was uploaded to the repository root. The package was locally tested with **22 passing tests** and ZIP integrity checks; this is not a third-party security certification.
+Download the **[corrected v0.3.1 ZIP](https://github.com/Hellfire13666/honeytrap-black-hive/releases/tag/v0.3.1)**, extract it and run in the extracted directory:
 
-The public release contains the corrected installers, local tools, test suite, documentation, and crowned-bee icon. Keep private monitoring logs and machine-specific information out of any public upload.
-
-### Source layout expected for release
-
-When the reviewed source files are published individually, the project will contain:
-
-```text
-honeytrap.py
-BLACK-HIVE-COMMAND-CENTER.py
-HIVE_MENU.py
-LIVE_SIGNAL.py
-LIVE_WATCH.py
-EVIDENCE_VAULT.py
-INSTALL.sh
-INSTALL-DESKTOP.sh
-README.md
-RECIPES.md
-tests/
-BLACK-HIVE-OBSIDIAN-QUEEN-ICON.png
+```bash
+bash INSTALL.sh
 ```
 
-### From GlitchByte Phantom Labs
+The installer preserves an existing versioned installation. To add the application-menu launcher after installing:
 
-**BLACK HIVE // OBSIDIAN QUEEN** is a standalone project. It does not require publishing private reports or files from other Phantom Labs tools.
+```bash
+bash INSTALL-DESKTOP.sh
+```
 
-*Defensive monitoring. Local control. Keep the receipts private.*
+For local tests from the extracted source:
+
+```bash
+python3 -m unittest discover -s tests -q
+```
+
+### 🕸️ Explore the modules
+
+| Module | Role |
+|---|---|
+| [BLACK-HIVE-COMMAND-CENTER.py](BLACK-HIVE-COMMAND-CENTER.py) | Command Center |
+| [LIVE_SIGNAL.py](LIVE_SIGNAL.py) | Defensive local event monitoring |
+| [LIVE_WATCH.py](LIVE_WATCH.py) | Local live-watch interface |
+| [EVIDENCE_VAULT.py](EVIDENCE_VAULT.py) | Evidence reporting |
+| [HIVE_MENU.py](HIVE_MENU.py) | Hive menu |
+| [honeytrap.py](honeytrap.py) | Honeypot core |
+| [RECIPES.md](RECIPES.md) | Copy-and-paste examples |
+| [RELEASE-NOTES.md](RELEASE-NOTES.md) | Version details |
+
+### 🛡️ Local by design
+
+BLACK HIVE is intended for **defensive testing on systems you own or are authorized to administer**. Its services are designed for the loopback interface `127.0.0.1`, not open internet exposure.
+
+**Keep private:** `LiveSignalReports/`, local event data, credentials, cookies, private keys, machine-specific paths, and logs. The repository excludes local monitoring data. See [SECURITY.md](SECURITY.md).
+
+> **Release:** v0.3.1 · Corrected installer ZIP · 22 local unit tests passed. Tests are not a security certification.
+
+---
+
+<div align="center">
+
+### 👑 GLITCHBYTE PHANTOM LABS
+
+**HONEYTRAP // BLACK HIVE · OBSIDIAN QUEEN**
+
+*The hive watches. The evidence stays yours.*
+
+[**OPEN THE RELEASE VAULT**](https://github.com/Hellfire13666/honeytrap-black-hive/releases/tag/v0.3.1)
+
+</div>
