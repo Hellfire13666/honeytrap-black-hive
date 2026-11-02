@@ -13,6 +13,12 @@
 
 </div>
 
+<p align="center">
+  <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2FHellfire13666%2Fhoneytrap-black-hive.json%3Fcolor%3D%23D4A53A&style=for-the-badge&labelColor=23122E" alt="BLACK HIVE README view counter">
+  <a href="https://github.com/Hellfire13666/honeytrap-black-hive/stargazers"><img src="https://img.shields.io/github/stars/Hellfire13666/honeytrap-black-hive?style=for-the-badge&color=9B59B6&labelColor=23122E" alt="GitHub stars"></a>
+  <a href="https://github.com/Hellfire13666/honeytrap-black-hive/releases/tag/v0.3.1"><img src="https://img.shields.io/badge/RELEASE-v0.3.1-D4A53A?style=for-the-badge&labelColor=23122E" alt="Version v0.3.1"></a>
+</p>
+
 ---
 
 ## ⬡ ENTER THE BLACK HIVE
