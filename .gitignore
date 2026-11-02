@@ -1,0 +1,23 @@
+# BLACK HIVE: keep local runtime data and private material out of Git
+LiveSignalReports/
+HoneyReports/
+reports/
+*.log
+*.jsonl
+*.sqlite
+*.sqlite3
+*.db
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+*.bak
+*.tmp
