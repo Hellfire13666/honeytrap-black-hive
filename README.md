@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="BLACK-HIVE-OBSIDIAN-QUEEN-ICON.png" alt="BLACK HIVE Obsidian Queen crowned bee artwork" width="220">
+<img src="art/hive2.png" alt="HONEYTRAP BLACK HIVE Obsidian Queen banner" width="100%">
 
 # 🐝 HONEYTRAP // BLACK HIVE
 ### 👑 OBSIDIAN QUEEN · v0.3.1
