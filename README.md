@@ -20,15 +20,13 @@ BLACK HIVE is intended for **defensive use on systems you own or are authorized 
 
 **Never publish** real event logs, local reports, credentials, browser cookies, private keys, usernames, hostnames, local absolute paths, or configuration containing personal information. Review the contents of an archive *before* distributing it. Public GitHub visibility means anyone can download files you commit.
 
-### Download and current repository status
+### Download the verified v0.3.1 release
 
-The v0.3.1 archive currently available in this repository is:
+**[Download BLACK HIVE // OBSIDIAN QUEEN v0.3.1](https://github.com/Hellfire13666/honeytrap-black-hive/releases/tag/v0.3.1)**
 
-[`BLACK-HIVE-v0.3.1-OBSIDIAN-QUEEN-RELEASE.zip`](./BLACK-HIVE-v0.3.1-OBSIDIAN-QUEEN-RELEASE.zip)
+The corrected release asset is **`BLACK-HIVE-v0.3.1-OBSIDIAN-QUEEN-INSTALLER-FIX.zip`**. It supersedes the previous ZIP that was uploaded to the repository root. The package was locally tested with **22 passing tests** and ZIP integrity checks; this is not a third-party security certification.
 
-**Important:** The ZIP was uploaded directly to the repository. Its individual source files have **not yet** been published here as browsable files, and a separate tagged GitHub Release has **not yet** been established. The ZIP's contents must be independently reviewed before it is treated as a finalized public release.
-
-The developer's local staging run reported **22 passing tests**; that is not a GitHub CI result or an independent verification of the uploaded binary archive.
+The public release contains the corrected installers, local tools, test suite, documentation, and crowned-bee icon. Keep private monitoring logs and machine-specific information out of any public upload.
 
 ### Source layout expected for release
 
