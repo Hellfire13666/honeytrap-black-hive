@@ -1,0 +1,61 @@
+name: Publish reviewed BLACK HIVE source
+
+on:
+  push:
+    paths:
+      - '.github/workflows/publish-reviewed-source.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download exact reviewed release and verify archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --retry 2 \
+            'https://github.com/Hellfire13666/honeytrap-black-hive/releases/download/v0.3.1/BLACK-HIVE-v0.3.1-OBSIDIAN-QUEEN-INSTALLER-FIX.zip' \
+            --output /tmp/black-hive-reviewed.zip
+          echo 'dc05ef1cbe63cc429d39bece620768fbeb414a1f03c615bf10ace9063e0083cf  /tmp/black-hive-reviewed.zip' | sha256sum -c -
+      - name: Extract only approved source and icon
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from zipfile import ZipFile
+          from pathlib import Path
+          files = [
+            "BLACK-HIVE-COMMAND-CENTER.py", "EVIDENCE_VAULT.py", "HIVE_MENU.py",
+            "LIVE_SIGNAL.py", "LIVE_WATCH.py", "honeytrap.py", "INSTALL.sh",
+            "INSTALL-DESKTOP.sh", "RECIPES.md", "BLACK-HIVE-OBSIDIAN-QUEEN-ICON.png",
+            "tests/test_evidence_vault.py", "tests/test_honeytrap.py",
+            "tests/test_live_signal.py", "tests/test_live_watch.py", "tests/test_menu.py",
+          ]
+          with ZipFile('/tmp/black-hive-reviewed.zip') as z:
+            assert set(z.namelist()) == set(files + ["README.md"])
+            assert z.testzip() is None
+            for name in files:
+              target=Path(name)
+              target.parent.mkdir(parents=True,exist_ok=True)
+              target.write_bytes(z.read(name))
+          print("Exact reviewed files extracted. Existing repository README and security docs preserved.")
+          PY
+      - name: Verify unit tests
+        run: python3 -m unittest discover -s tests -q
+      - name: Publish browsable source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- BLACK-HIVE-COMMAND-CENTER.py EVIDENCE_VAULT.py HIVE_MENU.py LIVE_SIGNAL.py LIVE_WATCH.py honeytrap.py INSTALL.sh INSTALL-DESKTOP.sh RECIPES.md BLACK-HIVE-OBSIDIAN-QUEEN-ICON.png tests/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish reviewed BLACK HIVE source'
+            git push
+          fi
